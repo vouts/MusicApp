@@ -24,7 +24,7 @@ public class Songs {
     /**
      * Album image
      */
-    private int mAlbumImage;
+    private String mAlbumImage;
 
     /**
      * Song list image
@@ -39,7 +39,7 @@ public class Songs {
      * @param albumName is the title of the album
      * @param albumImage is the cover of the album
      */
-    public Songs(String songName, String songArtist, String albumName, int albumImage) {
+    public Songs(String songName, String songArtist, String albumName, String albumImage) {
         mSongName = songName;
         mSongArtist = songArtist;
         mAlbumName = albumName;
@@ -70,7 +70,7 @@ public class Songs {
     /**
      * Get the album cover.
      */
-    public int getAlbumImage() {
+    public String getAlbumImage() {
         return mAlbumImage;
     }
 

@@ -47,26 +47,32 @@ public class SongsAdapter extends ArrayAdapter<Songs> {
 
         Songs currentSong = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID listImage
-        ImageView listImage = (ImageView) listItemView.findViewById(R.id.list_Image);
+        // Find the ImageView in the list_item.xml layout with the ID listImage
+        ImageView listImage =  listItemView.findViewById(R.id.list_Image);
         // Get the list Image of the current object and
         // set this image on the List image ImageView
         listImage.setImageResource(currentSong.getListImage());
 
+        // Find the TextView in the list_item.xml layout with the ID album_cover
+        TextView albumCover =  listItemView.findViewById(R.id.album_cover);
+        // Get the list Image of the current object and
+        // set this image on the album cover ImageView
+        albumCover.setText(currentSong.getAlbumImage());
+
         // Find the TextView in the list_item.xml layout with the ID song_title
-        TextView songName = (TextView) listItemView.findViewById(R.id.song_title);
+        TextView songName =  listItemView.findViewById(R.id.song_title);
         // Get the song name of the current  object and
         // set this text on the name TextView
         songName.setText(currentSong.getSongName());
 
         // Find the TextView in the list_item.xml layout with the ID song_artist
-        TextView songArtist = (TextView) listItemView.findViewById(R.id.song_artist);
+        TextView songArtist =  listItemView.findViewById(R.id.song_artist);
         // Get the Artist from the current Songs object and
         // set this text on the Artist TextView
         songArtist.setText(currentSong.getSongArtist());
 
         // Find the TextView in the list_item.xml layout with the ID song_album
-        TextView songAlbum = (TextView) listItemView.findViewById(R.id.song_album);
+        TextView songAlbum =  listItemView.findViewById(R.id.song_album);
         // Get the Album title from the current Songs object and
         // set this text on the Album TextView
         songAlbum.setText(currentSong.getalbumName());
