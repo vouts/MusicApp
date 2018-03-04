@@ -28,8 +28,7 @@ public class PlayerActivity extends AppCompatActivity {
             Class res = R.drawable.class;
             Field field = res.getField(albumCover);
             drawableId = field.getInt(null);
-        }
-        catch (Exception  ignored) {
+        } catch (Exception ignored) {
             Log.e("Music Player", "Failure to get drawable id.");
         }
 

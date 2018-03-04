@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by Stelios on 3/3/2018.
  */
 
-public class Splash extends AppCompatActivity{
+public class Splash extends AppCompatActivity {
     // Splash screen timer
     private static int SPLASH_TIME_OUT = 2200;
 

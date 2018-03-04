@@ -34,9 +34,9 @@ public class Songs {
     /**
      * Create a new Word object.
      *
-     * @param songName is the title of the song
+     * @param songName   is the title of the song
      * @param songArtist is the artist of the song
-     * @param albumName is the title of the album
+     * @param albumName  is the title of the album
      * @param albumImage is the cover of the album
      */
     public Songs(String songName, String songArtist, String albumName, String albumImage) {
