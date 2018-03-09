@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Music</string>
     <string name="player_name">Now Playing</string>
+    <string name="divider">\u00A0/\u00A0</string>
 </resources>

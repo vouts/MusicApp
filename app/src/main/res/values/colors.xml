@@ -2,5 +2,7 @@
 <resources>
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff6f00</color>
+    <color name="songBox">#99000000</color>
+    <color name="TextColor">#ffffff</color>
 </resources>
