@@ -1,8 +1,10 @@
 package com.example.android.musicapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,30 +56,43 @@ public class SongsAdapter extends ArrayAdapter<Songs> {
         listImage.setImageResource(currentSong.getListImage());
 
         // Find the TextView in the list_item.xml layout with the ID album_cover
-        TextView albumCover = listItemView.findViewById(R.id.album_cover);
+        final TextView albumCover = listItemView.findViewById(R.id.album_cover);
         // Get the list Image of the current object and
         // set this image on the album cover ImageView
         albumCover.setText(currentSong.getAlbumImage());
 
         // Find the TextView in the list_item.xml layout with the ID song_title
-        TextView songName = listItemView.findViewById(R.id.song_title);
+        final TextView songName = listItemView.findViewById(R.id.song_title);
         // Get the song name of the current  object and
         // set this text on the name TextView
         songName.setText(currentSong.getSongName());
 
         // Find the TextView in the list_item.xml layout with the ID song_artist
-        TextView songArtist = listItemView.findViewById(R.id.song_artist);
+        final TextView songArtist = listItemView.findViewById(R.id.song_artist);
         // Get the Artist from the current Songs object and
         // set this text on the Artist TextView
         songArtist.setText(currentSong.getSongArtist());
 
         // Find the TextView in the list_item.xml layout with the ID song_album
-        TextView songAlbum = listItemView.findViewById(R.id.song_album);
+        final TextView songAlbum = listItemView.findViewById(R.id.song_album);
         // Get the Album title from the current Songs object and
         // set this text on the Album TextView
         songAlbum.setText(currentSong.getalbumName());
 
-
+        //Set onClickListener that opens the player for the selected song
+        final View mView = listItemView;
+        listItemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start next Intent and send the required Extra information
+                Intent MusicPlayer = new Intent(mView.getContext(), PlayerActivity.class);
+                MusicPlayer.putExtra("Song_Name", songName.getText());
+                MusicPlayer.putExtra("Song_Artist", songArtist.getText());
+                MusicPlayer.putExtra("Song_Album", songAlbum.getText());
+                MusicPlayer.putExtra("Album_Cover", albumCover.getText().toString());
+                mView.getContext().startActivity(MusicPlayer);
+            }
+        });
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
         return listItemView;

@@ -1,5 +1,7 @@
 package com.example.android.musicapp;
 
+import android.content.Context;
+
 /**
  * Created by Stelios on 3/3/2018.
  */
@@ -32,6 +34,11 @@ public class Songs {
     private int mListImage = R.drawable.track;
 
     /**
+     * Song list image
+     */
+    private Context mContext;
+
+    /**
      * Create a new Word object.
      *
      * @param songName   is the title of the song
@@ -39,11 +46,19 @@ public class Songs {
      * @param albumName  is the title of the album
      * @param albumImage is the cover of the album
      */
-    public Songs(String songName, String songArtist, String albumName, String albumImage) {
+    public Songs(Context context, String songName, String songArtist, String albumName, String albumImage) {
+        mContext = context;
         mSongName = songName;
         mSongArtist = songArtist;
         mAlbumName = albumName;
         mAlbumImage = albumImage;
+    }
+
+    /**
+     * Get the previous Context.
+     */
+    public Context getContext() {
+        return mContext;
     }
 
     /**

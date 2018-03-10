@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.lang.reflect.Field;
 
@@ -32,7 +33,17 @@ public class PlayerActivity extends AppCompatActivity {
             Log.e("Music Player", "Failure to get drawable id.");
         }
 
-        ImageView albumCoverImg = findViewById(R.id.album_cover);
+        //Set content to player
+        ImageView albumCoverImg = findViewById(R.id.player_album_cover);
         albumCoverImg.setImageResource(drawableId);
+
+        TextView songNameView = findViewById(R.id.player_song_title);
+        songNameView.setText(songName);
+
+        TextView songArtistView = findViewById(R.id.player_song_artist);
+        songArtistView.setText(songArtist);
+
+        TextView albumNameView = findViewById(R.id.player_song_album);
+        albumNameView.setText(albumName);
     }
 }

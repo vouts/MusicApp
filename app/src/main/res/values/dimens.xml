@@ -4,5 +4,7 @@
     <dimen name="SongBoxMarginSides">16dp</dimen>
     <dimen name="ListImageSize">30dp</dimen>
     <dimen name="ListImageMargin">5dp</dimen>
-
+    <dimen name="PlayerAlbumImgSize">200dp</dimen>
+    <dimen name="PlayerButtonMarginTop">5dp</dimen>
+    <dimen name="PlayerButtonMarginLeft">10dp</dimen>
 </resources>

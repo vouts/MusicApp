@@ -1,75 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:gravity="center_horizontal|center_vertical"
-    android:orientation="vertical"
+    style="@style/PlayerWrapper"
     tools:context="com.example.android.musicapp.PlayerActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <LinearLayout style="@style/PlayerSongInfoBox">
 
         <TextView
-            android:id="@+id/song_title"
-            style="@style/ListText" />
+            android:id="@+id/player_song_title"
+            style="@style/PlayerText" />
 
         <LinearLayout style="@style/SongSideInfoBox">
 
             <TextView
-                android:id="@+id/song_artist"
-                style="@style/ListText" />
+                android:id="@+id/player_song_artist"
+                style="@style/PlayerText" />
 
             <TextView
-                style="@style/ListText"
+                style="@style/PlayerText"
                 android:text="@string/divider" />
 
             <TextView
-                android:id="@+id/song_album"
-                style="@style/ListText" />
+                android:id="@+id/player_song_album"
+                style="@style/PlayerText" />
         </LinearLayout>
 
     </LinearLayout>
 
 
     <ImageView
-        android:id="@+id/album_cover"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:id="@+id/player_album_cover"
+        style="@style/PlayerAlbumCoverImg" />
 
-        android:src="@drawable/album" />
     <ProgressBar
-        android:id="@+id/progress_bar"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="false"
-        android:layout_marginRight="@dimen/SongBoxMarginSides"
-        android:layout_marginLeft="@dimen/SongBoxMarginSides"
-        android:max="100"
-        android:progress="40"/>
+        android:id="@+id/player_progress_bar"
+        style="@style/PlayerProgressBar"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/PlayerButtonArea">
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/playpause"
-            android:background="@null"/>
+            android:id="@+id/play_pause"
+            style="@style/PlayerButton"
+            android:src="@drawable/playpause" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/stop"
-            android:background="@null"/>
+            android:id="@+id/stop"
+            style="@style/PlayerButton"
+            android:src="@drawable/stop" />
     </LinearLayout>
 </LinearLayout>

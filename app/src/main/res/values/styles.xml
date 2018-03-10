@@ -58,4 +58,47 @@
     </style>
     <!-- End of List items style-->\
     <!-- Begin of Player Activity style-->
+    <style name="PlayerWrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+    </style>
+    <style name="PlayerSongInfoBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="PlayerText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/TextColor</item>
+    </style>
+    <style name="PlayerAlbumCoverImg">
+        <item name="android:layout_width">@dimen/PlayerAlbumImgSize</item>
+        <item name="android:layout_height">@dimen/PlayerAlbumImgSize</item>
+    </style>
+    <style name="PlayerProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/SongBoxMarginSides</item>
+        <item name="android:layout_marginRight">@dimen/SongBoxMarginSides</item>
+        <item name="android:indeterminate">false</item>
+        <item name="android:max">100</item>
+        <item name="android:progress">40</item>
+    </style>
+    <style name="PlayerButtonArea">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="PlayerButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginTop">@dimen/PlayerButtonMarginTop</item>
+        <item name="android:layout_marginLeft">@dimen/PlayerButtonMarginLeft</item>
+    </style>
+    <!-- End of Player Activity style-->
 </resources>
