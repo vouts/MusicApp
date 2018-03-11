@@ -1,8 +1,11 @@
 package com.example.android.musicapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,5 +48,18 @@ public class PlayerActivity extends AppCompatActivity {
 
         TextView albumNameView = findViewById(R.id.player_song_album);
         albumNameView.setText(albumName);
+
+        //Return to Main Activity
+        ImageButton returnBack = findViewById(R.id.back);
+        returnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent FamilyIntent = new Intent(PlayerActivity.this, MainActivity.class);
+                startActivity(FamilyIntent);
+
+                // close Player activity
+                finish();
+            }
+        });
     }
 }

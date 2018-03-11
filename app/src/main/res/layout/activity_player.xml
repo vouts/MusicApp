@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/PlayerWrapper"
+    style="@style/MainWrapper"
     tools:context="com.example.android.musicapp.PlayerActivity">
 
-    <LinearLayout style="@style/PlayerSongInfoBox">
+    <ImageButton
+        android:id="@+id/back"
+        style="@style/PlayerButton"
+        android:src="@drawable/arrowleft" />
 
-        <TextView
-            android:id="@+id/player_song_title"
-            style="@style/PlayerText" />
+    <LinearLayout style="@style/PlayerWrapper">
 
-        <LinearLayout style="@style/SongSideInfoBox">
+        <LinearLayout style="@style/PlayerSongInfoBox">
 
             <TextView
-                android:id="@+id/player_song_artist"
+                android:id="@+id/player_song_title"
                 style="@style/PlayerText" />
 
-            <TextView
-                style="@style/PlayerText"
-                android:text="@string/divider" />
+            <LinearLayout style="@style/SongSideInfoBox">
 
-            <TextView
-                android:id="@+id/player_song_album"
-                style="@style/PlayerText" />
+                <TextView
+                    android:id="@+id/player_song_artist"
+                    style="@style/PlayerText" />
+
+                <TextView
+                    style="@style/PlayerText"
+                    android:text="@string/divider" />
+
+                <TextView
+                    android:id="@+id/player_song_album"
+                    style="@style/PlayerText" />
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
 
+        <ImageView
+            android:id="@+id/player_album_cover"
+            style="@style/PlayerAlbumCoverImg" />
 
-    <ImageView
-        android:id="@+id/player_album_cover"
-        style="@style/PlayerAlbumCoverImg" />
+        <ProgressBar
+            android:id="@+id/player_progress_bar"
+            style="@style/PlayerProgressBar" />
 
-    <ProgressBar
-        android:id="@+id/player_progress_bar"
-        style="@style/PlayerProgressBar"/>
+        <LinearLayout style="@style/PlayerButtonArea">
 
-    <LinearLayout style="@style/PlayerButtonArea">
+            <ImageButton
+                android:id="@+id/play_pause"
+                style="@style/PlayerButton"
+                android:src="@drawable/playpause" />
 
-        <ImageButton
-            android:id="@+id/play_pause"
-            style="@style/PlayerButton"
-            android:src="@drawable/playpause" />
-
-        <ImageButton
-            android:id="@+id/stop"
-            style="@style/PlayerButton"
-            android:src="@drawable/stop" />
+            <ImageButton
+                android:id="@+id/stop"
+                style="@style/PlayerButton"
+                android:src="@drawable/stop" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
