@@ -4,10 +4,11 @@
     style="@style/MainWrapper"
     tools:context="com.example.android.musicapp.PlayerActivity">
 
-    <ImageButton
+    <Button
         android:id="@+id/back"
-        style="@style/PlayerButton"
-        android:src="@drawable/arrowleft" />
+        style="@style/PlayerBackButton"
+        android:text="@string/back_button"
+        />
 
     <LinearLayout style="@style/PlayerWrapper">
 

@@ -64,12 +64,13 @@
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:orientation">vertical</item>
     </style>
-    <style name="BackButton">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@null</item>
-        <item name="android:layout_marginTop">@dimen/PlayerButtonMarginTop</item>
+    <style name="PlayerBackButton">
+        <item name="android:layout_width">@dimen/BackButtonWidth</item>
+        <item name="android:layout_height">@dimen/BackButtonHeight</item>
+        <item name="android:background">@color/colorPrimary</item>
         <item name="android:layout_marginLeft">@dimen/PlayerButtonMarginLeft</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:textColor">@color/TextColor</item>
     </style>
     <style name="PlayerWrapper">
         <item name="android:layout_width">match_parent</item>
@@ -77,6 +78,7 @@
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:orientation">vertical</item>
         <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:paddingBottom">20dp</item>
     </style>
     <style name="PlayerSongInfoBox">
         <item name="android:layout_width">wrap_content</item>
@@ -107,10 +109,9 @@
         <item name="android:orientation">horizontal</item>
     </style>
     <style name="PlayerButton">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/PlayerImageButtonSize</item>
+        <item name="android:layout_height">@dimen/PlayerImageButtonSize</item>
         <item name="android:background">@null</item>
-        <item name="android:layout_marginTop">@dimen/PlayerButtonMarginTop</item>
         <item name="android:layout_marginLeft">@dimen/PlayerButtonMarginLeft</item>
     </style>
     <!-- End of Player Activity style-->

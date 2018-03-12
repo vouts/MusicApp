@@ -2,4 +2,5 @@
     <string name="app_name">Music</string>
     <string name="player_name">Now Playing</string>
     <string name="divider">\u00A0/\u00A0</string>
+    <string name="back_button">&#8592; Back</string>
 </resources>

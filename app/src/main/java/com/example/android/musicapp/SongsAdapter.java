@@ -50,7 +50,7 @@ public class SongsAdapter extends ArrayAdapter<Songs> {
         Songs currentSong = getItem(position);
 
         // Find the ImageView in the list_item.xml layout with the ID listImage
-        ImageView listImage = listItemView.findViewById(R.id.list_Image);
+        ImageView listImage = listItemView.findViewById(R.id.list_image);
         // Get the list Image of the current object and
         // set this image on the List image ImageView
         listImage.setImageResource(currentSong.getListImage());
@@ -93,7 +93,7 @@ public class SongsAdapter extends ArrayAdapter<Songs> {
                 mView.getContext().startActivity(MusicPlayer);
             }
         });
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
+        // Return the whole list item layout (containing 4 TextViews and an ImageView)
         // so that it can be shown in the ListView
         return listItemView;
     }

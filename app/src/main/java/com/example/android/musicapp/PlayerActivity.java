@@ -50,7 +50,7 @@ public class PlayerActivity extends AppCompatActivity {
         albumNameView.setText(albumName);
 
         //Return to Main Activity
-        ImageButton returnBack = findViewById(R.id.back);
+        TextView returnBack = findViewById(R.id.back);
         returnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

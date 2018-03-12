@@ -3,7 +3,7 @@
     style="@style/Wrapper">
 
     <ImageView
-        android:id="@+id/list_Image"
+        android:id="@+id/list_image"
         style="@style/ListImage" />
 
     <LinearLayout style="@style/SongInfoBox">
