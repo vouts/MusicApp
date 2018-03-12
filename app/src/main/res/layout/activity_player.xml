@@ -35,7 +35,6 @@
 
         </LinearLayout>
 
-
         <ImageView
             android:id="@+id/player_album_cover"
             style="@style/PlayerAlbumCoverImg" />
